@@ -1,53 +1,27 @@
+import React from "react";
+import Logo from "./assets/img/logo.png";
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import logo from "./assets/img/logo.png";
-import "./App.css";
+// import "./App.css";
+import cs from "./customcss.module.css";
 
-function App() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <>
-      <div>
-        <YoChaiMero />
-        <YoChaiAarkaihai />
-        {/* <img src={logo} alt="Logo" /> */}
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  );
-}
-
-function YoChaiMero() {
+const App = () => {
+  const [count, setcount] = useState(0);
   return (
     <div>
-      <h1 style={{ color: "red" }}>Yo Chai Mero function hai ta guys</h1>
-    </div>
-  );
-}
-
-const YoChaiAarkaihai = () => {
-  return (
-    <div>
-      <h1 style={{ color: "green" }}>Yo Chai Aarkai function hai guys</h1>
+      <h1 className={cs.title}>Traning of react!!</h1>
+      <img
+        className={count % 2 === 0 ? cs.my_img : cs.new_style}
+        src={Logo}
+        alt="logo"
+      />
+      <br />
+      <button
+        onClick={() => {
+          setcount(count + 1);
+        }}
+      >
+        Count: {count}
+      </button>
     </div>
   );
 };

@@ -1,0 +1,21 @@
+.title
+{
+    color: blue;
+    font-size: 50px;
+    text-shadow: 3px 3px 8px purple;
+    font-weight: bold;
+}
+
+.my_img{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    border: 5px solid red;
+}
+
+.new_style{
+  border-radius: 50%;
+  border: 5px solid orange;
+  height: 400px;
+  width: 400px;
+}
