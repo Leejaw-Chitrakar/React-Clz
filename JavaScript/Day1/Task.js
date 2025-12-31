@@ -1,4 +1,4 @@
-// Create a function that calculate the sum of numbers in a n array using rest and sprade
+// Create a function that calculate the sum of numbers in an array using rest and sprade
 let var1 = [1,2,3,4,5];
 
 let addUsingRest = (...val) => {
@@ -26,3 +26,4 @@ console.log(obj3);
 let {id,name,age,address,city}= obj3;
 console.log(id,name,age,address,city);
 
+// Functionma pass garyrw garw
