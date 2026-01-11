@@ -1,0 +1,1 @@
+// Divide number by zero.
