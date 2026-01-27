@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+    margin: 0;;
+    padding: 0;
+}
+
+h1{
+    color: red;
+}
+
+.navbar{
+    display: flex;
+    background-color: black;
+    color: white;
+    padding: 30px 20px;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menus{
+    display: flex;
+    gap: 40px;
+}
