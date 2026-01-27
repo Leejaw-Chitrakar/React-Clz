@@ -1,0 +1,10 @@
+// 8. Merge two arrays immutably into a new array.
+
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+
+const mergedArray = [...arr1, ...arr2];
+
+console.log("Array 1:", arr1);
+console.log("Array 2:", arr2);
+console.log("Merged Array:", mergedArray);

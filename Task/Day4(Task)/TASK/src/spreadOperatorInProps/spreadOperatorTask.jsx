@@ -1,0 +1,52 @@
+import React from 'react';
+
+import T1 from './T1.jsx';
+import T2 from './T2.jsx';
+import T3 from './T3.jsx';
+import T4 from './T4.jsx';
+import T5 from './T5.jsx';
+import T6 from './T6.jsx';
+import T7 from './T7.jsx';
+import T8 from './T8.jsx';
+import T9 from './T9.jsx';
+import T10 from './T10.jsx';
+
+const SpreadOperatorTask = () => {
+    return (
+        <div>
+            <h1>Spread Operator in Props</h1>
+            <h3>Task 1: Spread Config</h3>
+            <T1/>
+            <hr />
+            <h3>Task 2: Override Prop</h3>
+            <T2/>
+            <hr />
+            <h3>Task 3: Default + Override</h3>
+            <T3/>
+            <hr />
+            <h3>Task 4: Spread Styles</h3>
+            <T4/>
+            <hr />
+            <h3>Task 5: Spread Handlers</h3>
+            <T5/>
+            <hr />
+            <h3>Task 6: HTML Attributes (...rest)</h3>
+            <T6/>
+            <hr />
+            <h3>Task 7: Spread State</h3>
+            <T7/>
+            <hr />
+            <h3>Task 8: Merge Objects</h3>
+            <T8/>
+            <hr />
+            <h3>Task 9: Clone + Add</h3>
+            <T9/>
+            <hr />
+            <h3>Task 10: Prop Wrapper</h3>
+            <T10/>
+            <hr />
+        </div>
+    );
+};
+
+export default SpreadOperatorTask;
