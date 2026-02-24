@@ -1,5 +1,7 @@
 import { Component1 } from "./component/home";
 import EventHandeling from "./eventHandeling/eventHandeling.jsx";
+import FoodMenuList from "./pages/FoodMenus.jsx"
+import DynamicFoodMenuList from "./pages/DynamicFoodMenus.jsx"
 // always start with Capital letter to create components
 // Functional Component
 let App =() => {
@@ -21,6 +23,8 @@ let App =() => {
             {/* <h6>Ever or Odd: {78%2==0 ? "Even" : "Odd"}</h6> */}
             {/* <Component1 /> */}
             {/* <EventHandeling /> */}
+            <FoodMenuList />
+            <DynamicFoodMenuList />
         </div>
     )
 }

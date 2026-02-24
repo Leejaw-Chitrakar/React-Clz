@@ -19,14 +19,14 @@ let myObject = {
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <CounterApp />
+    {/* <CounterApp /> */}
     {/* <h2>Before Login</h2>
     <AuthPage isAuthenticated={false}/>
     <br />
     <br />
     <h2>After Login</h2>
     <AuthPage isAuthenticated={true}/> */}
-    {/* <App /> */}
+    <App />
     {/* use navBar here */}
     {/* <Navbar /> */}
     {/* <Home /> */}
