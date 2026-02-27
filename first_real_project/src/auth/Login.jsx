@@ -28,7 +28,7 @@ let LoginPage = () => {
                 <input type="email" placeholder="Enter your email" />
                 <br />
                 <br />
-                <input type="email" placeholder="Enter strong password." />
+                <input type="password" placeholder="Enter strong password" />
                 <br />
                 <br />
                 <button>Login</button>

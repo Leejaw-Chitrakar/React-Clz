@@ -1,56 +1,47 @@
 import { useState } from "react"
-import foodMenuList from "../datas/food_menue_data.js"
+import initialFoodData from "../datas/food_menue_data.js"
+import Form from "../component/form.jsx"
+import "../style/form.css"
 
 const DynamicFoodMenus = () => {
-    const [foodMenuList, setFoodMenuList] = useState([
-         {
-        id: 1,
-        name: "MOMO",
-        price: 150,
-        description: "This is momo.",
-        image: "https://images.unsplash.com/photo-1694923450868-b432a8ee52aa?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-    ])
-    const handleAddFoodMenu = () => {
-        let newFm = {
-            id: 3,
-            name: "Burger",
-            price: 220,
-            description: "This is Burger.",
-            image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=999&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        };
-        setFoodMenuList([...foodMenuList, newFm])
-
+    const [foodItems, setFoodItems] = useState(initialFoodData)
+    
+    const handleAddFoodMenu = (newFM) => {
+        setFoodItems([...foodItems, newFM])
     }
     return(
-        <div>
-            <h1>Food Menu</h1>
-            {/* rendering list */}
-            <button onClick={handleAddFoodMenu}>Add Food Menu</button>
-            <div style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr 1fr",
-                gap: "20px", 
-            }}>
-                {
-                    foodMenuList.map(
-                        (fm,i) => {
-                            return(
-                                <div key = {`${fm.id}-${fm.name}`} style = {{
-                                    backgroundColor: "orange",
-                                    borderRadius: "20px",
-                                    padding: "10px",
-                                    border: "3px solid black",
-                                }}>
-                                    <h4>{fm.name}</h4>
-                                    <b>Price: {fm.price}</b>
-                                    <p>{fm.description}</p>
-                                    <img src={fm.image} alt={fm.name} height={350} width={350} />
-                                </div>
-                            )
-                        }
-                    )
-                }
+        <div className="main-container">
+            <div style={{ flex: 1 }}>
+                <h1>Food Menu</h1>
+                <div style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+                    gap: "20px", 
+                }}>
+                    {
+                        foodItems.map(
+                            (fm) => {
+                                return(
+                                    <div key = {fm.id} style = {{
+                                        backgroundColor: "orange",
+                                        borderRadius: "20px",
+                                        padding: "10px",
+                                        border: "3px solid black",
+                                    }}>
+                                        <h4>{fm.name}</h4>
+                                        <b>Price: {fm.price}</b>
+                                        <p>{fm.description}</p>
+                                        <img src={fm.image} alt={fm.name} style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '10px' }} />
+                                    </div>
+                                )
+                            }
+                        )
+                    }
+                </div>
+            </div>
+
+            <div className="form-container">
+                <Form onSubmit={handleAddFoodMenu} />
             </div>
         </div>
     )
