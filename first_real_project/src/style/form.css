@@ -5,6 +5,7 @@
     align-items: flex-start;
     justify-content: right;
     min-height: 100vh;
+    min-width: 95vw;
 }
 
 .form-container {
