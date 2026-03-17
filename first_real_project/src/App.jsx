@@ -26,14 +26,9 @@ let App = () => {
       {/* <Component1 /> */}
       {/* <EventHandeling /> */}
       {/* <FoodMenuList /> */}
-      <div className="main-container">
-        <div>
-          <DynamicFoodMenuList />
-        </div>
-        {/* <div className="form-container">
-          <Form />
-        </div> */}
-      </div>
+    <div>
+      <DynamicFoodMenuList />
+    </div>
     </div>
   );
 };

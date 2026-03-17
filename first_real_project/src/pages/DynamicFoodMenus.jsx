@@ -9,29 +9,25 @@ const DynamicFoodMenus = () => {
     const handleAddFoodMenu = (newFM) => {
         setFoodItems([...foodItems, newFM])
     }
-    return(
+
+    return (
         <div className="main-container">
-            <div style={{ flex: 1 }}>
-                <h1>Food Menu</h1>
-                <div style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
-                    gap: "20px", 
-                }}>
+            <div className="menu-section" style={{ flex: 1 }}>
+                <h1 className="menu-title">Explore Our Menu</h1>
+                <div className="food-grid">
                     {
                         foodItems.map(
                             (fm) => {
-                                return(
-                                    <div key = {fm.id} style = {{
-                                        backgroundColor: "orange",
-                                        borderRadius: "20px",
-                                        padding: "10px",
-                                        border: "3px solid black",
-                                    }}>
-                                        <h4>{fm.name}</h4>
-                                        <b>Price: {fm.price}</b>
-                                        <p>{fm.description}</p>
-                                        <img src={fm.image} alt={fm.name} style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '10px' }} />
+                                return (
+                                    <div key={fm.id} className="food-card">
+                                        <div className="image-wrapper">
+                                            <img src={fm.image} alt={fm.name} />
+                                            <span className="price-tag">${fm.price}</span>
+                                        </div>
+                                        <div className="food-info">
+                                            <h4>{fm.name}</h4>
+                                            <p>{fm.description}</p>
+                                        </div>
                                     </div>
                                 )
                             }
